@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Guide 2 Wiki</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/g2w.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<div class="container" style="margin-top: 20px">
+
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Guide2Wiki</a>
+			</div>
+			<p class="navbar-text navbar-right">
+				Developed by: <a href="http://www.fallensword.com/index.php?cmd=profile&player_id=2956423" class="navbar-link">bizzpu17</a> 
+				and 
+				<a href="http://www.fallensword.com/index.php?cmd=profile&player_id=3853" class="navbar-link">koenvdv</a>
+			</p>
+		</nav>
+
+		<div class="alert alert-info" id="instruction">
+			<table>
+				<tr>
+					<td>
+					 <b>Instruction:</b> To create Wiki code copy the HTML of a <a href="http://guide.fallensword.com">Official Guide</a> area,
+					 past it in the bottom left box and click
+					</td>
+					<td align="right">
+						<button type="button" class="btn btn-success" style="display: inline-block" onclick="G2W.start()">Generate</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="alert alert-dismissable hidden" id="alertbox"></div>
+
+		<div class="well well-sm">
+			<table class="table table-bordered table-condensed">
+				<thead>
+					<tr>
+						<td width="50%" align="center">
+						  Source code from <a href="http://guide.fallensword.com">Official Guide</a>
+						</td>
+						<td width="50%" align="center">Generated Wiki code</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><textarea id="source" class="form-control" rows="15"></textarea>
+						<td><textarea id="result" class="form-control" rows="15" readonly onclick="this.select()"></textarea>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="modal fade" id="customModal" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body text-center" id="cm-message"></div>
+					<div class="modal-body text-center" id="cm-data"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="cm-action" onclick="G2W.CustomDialogs.getCurrent().close();">Next ></button>
+					</div>
+					<div class="modal-body text-center" id="cm-map"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/g2w.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
