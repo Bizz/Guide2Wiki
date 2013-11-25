@@ -634,8 +634,8 @@ var G2W;
                     wiki = appendReplaced(wiki, '|' + imgUrl, ["%tile%", img]);
                 }
                 wiki = append(wiki, '|' + y);
-                wiki = append(wiki, '|-');
             }
+            wiki = append(wiki, '|-');
 
             wiki = append(wiki, '|&nbsp;');
             for (var i = 0; i < map.width; i++) {
