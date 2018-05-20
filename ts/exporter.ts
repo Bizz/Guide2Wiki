@@ -29,13 +29,12 @@ module G2W {
         private NONE: string = '* {{none}}';
         private MAP_NOTE: string = '{{MapNote|image=%url%|target=%target%|type=%type%}}';
 
-        private HOST_URL: string = "http://huntedcow.cachefly.net/fs";
-        private TILE_URL: string = this.HOST_URL + "/tiles/%set%_%tile%.gif";
-        private LOCATION_URL: string = this.HOST_URL + "/locations/%tile%.gif";
-        private STAIR_URL: string = this.HOST_URL + "/stairways/%tile%.gif";
-        private RELIC_URL: string = this.HOST_URL + "/relics/%tile%.gif";
-        private PORTAL_URL: string = this.HOST_URL + "/portals/%tile%.gif";
-        private SHOP_URL: string = this.HOST_URL + "/shops/%tile%.gif";
+        private TILE_URL: string = G2W.Constants.CDN_HOSTNAME + "/tiles/%set%_%tile%.gif";
+        private LOCATION_URL: string = G2W.Constants.CDN_HOSTNAME + "/locations/%tile%.gif";
+        private STAIR_URL: string = G2W.Constants.CDN_HOSTNAME + "/stairways/%tile%.gif";
+        private RELIC_URL: string = G2W.Constants.CDN_HOSTNAME + "/relics/%tile%.gif";
+        private PORTAL_URL: string = G2W.Constants.CDN_HOSTNAME + "/portals/%tile%.gif";
+        private SHOP_URL: string = G2W.Constants.CDN_HOSTNAME + "/shops/%tile%.gif";
 
         /*
          * Start conversion from source code to {@link G2W.Data.data} object.

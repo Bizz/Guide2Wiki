@@ -276,13 +276,12 @@ module G2W.Data {
         generateMap() {
             if (this.generatedMap == undefined) {
                 var table = document.createElement("table"),
-                    urlHost = "http://huntedcow.cachefly.net/fs",
-                    tileUrl = urlHost + "/tiles/%set%_%tile%.gif",
-                    locationUrl = urlHost + "/locations/%tile%.gif",
-                    stairUrl = urlHost + "/stairways/%tile%.gif",
-                    relicUrl = urlHost + "/relics/%tile%.gif",
-                    portalUrl = urlHost + "/portals/%tile%.gif",
-                    shopsUrl = urlHost + "/shops/%tile%.gif";
+                    tileUrl = G2W.Constants.CDN_HOSTNAME + "/tiles/%set%_%tile%.gif",
+                    locationUrl = G2W.Constants.CDN_HOSTNAME + "/locations/%tile%.gif",
+                    stairUrl = G2W.Constants.CDN_HOSTNAME + "/stairways/%tile%.gif",
+                    relicUrl = G2W.Constants.CDN_HOSTNAME + "/relics/%tile%.gif",
+                    portalUrl = G2W.Constants.CDN_HOSTNAME + "/portals/%tile%.gif",
+                    shopsUrl = G2W.Constants.CDN_HOSTNAME + "/shops/%tile%.gif";
 
                 table.border = "2";
                 table.cellSpacing = "0";
